@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', function () {
-    echo "Hello World";
+Route::get('/find', function () {
+
+    $posts = Post::all();
+
+    foreach($posts as $post) {
+        return $post->Price;
+    }
+
 });
