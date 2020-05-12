@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Post;
+use App\Purchase;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,10 +20,10 @@ Route::get('/', function () {
 
 Route::get('/find', function () {
 
-    $posts = Post::all();
+    $posts = Purchase::get();
 
-    foreach($posts as $post) {
-        return $post->Price;
+    foreach($posts as $value) {
+        $value->Price;
     }
 
 });
