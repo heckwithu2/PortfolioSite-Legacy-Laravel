@@ -1,14 +1,14 @@
 @extends('layouts.base')
-<div class="container">
-    @foreach ($purchases as $record)
-        <span>{{$record}}</span>
-            @endforeach
-</div>
 
+@section('content')
 
-{{--@section('title')--}}
+    <div class="container">
+        @foreach ($purchases as $record)
+            <span>{{$record}}</span>
+        @endforeach
+    </div>
 
-{{--    @endsection--}}
+@endsection
 
 {{--@section('content')--}}
 

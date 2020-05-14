@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Purchase;
+use App\Finder;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +12,4 @@ use App\Purchase;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/finder', 'finderController@show');
+Route::get('/', 'finderController@show');
