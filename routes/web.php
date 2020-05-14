@@ -18,12 +18,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/find', function () {
-
-    $posts = Purchase::get();
-
-    foreach($posts as $value) {
-        $value->Price;
-    }
-
-});
+Route::get('/finder', 'finderController@show');
