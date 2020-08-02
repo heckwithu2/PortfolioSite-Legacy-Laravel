@@ -4,17 +4,26 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Jeremiah's App</title>
-    <style>
-        .header {
-            height: 100px;
-            background-color: steelblue;
-        }
-    </style>
-    <div class="container-fluid header">
-        <h2>Header</h2>
+    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+
+    <div id="header" class="container-fluid header">
+
     </div>
 </head>
-@yield('content')
+
 <body>
+
+    <script>
+        document.getElementById("header").innerHTML = "Thank you for browsing!" ;
+    </script>
+
+    <div class="menuShell">
+        <div class="menu">
+
+        </div>
+    </div>
+
+
+@yield('content')
 </body>
 </html>

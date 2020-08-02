@@ -6,3 +6,30 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.header {
+  height: 500px;
+  background-color: red;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+}
+
+.menu {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0px;
+  background-color: brown;
+  width: 20px;
+  height: 100px;
+}
+
+* {
+  font-family: "Century Gothic";
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
+
+body {
+
+}

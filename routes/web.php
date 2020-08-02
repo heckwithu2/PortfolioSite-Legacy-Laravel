@@ -13,3 +13,4 @@ use App\Finder;
 |
 */
 Route::get('/', 'finderController@show');
+Route::get('/home', 'homeController@home');
