@@ -10934,7 +10934,7 @@ a.text-dark:focus {
 }
 
 .header {
-  height: 500px;
+  height: 50px;
   background-color: red;
   position: -webkit-sticky;
   position: sticky;

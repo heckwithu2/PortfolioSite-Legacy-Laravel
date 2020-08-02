@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Jeremiah's App</title>
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/base.css')}}">
 
     <div id="header" class="container-fluid header">
 
@@ -23,6 +24,9 @@
         </div>
     </div>
 
+    <div class="back">
+        Im Here
+    </div>
 
 @yield('content')
 </body>
