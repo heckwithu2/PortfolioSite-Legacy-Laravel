@@ -10,9 +10,36 @@
 * {
   font-family: "Century Gothic";
   transition-timing-function: ease-in-out;
-  transition-duration: 1s;
+  transition-duration: .2s;
 }
 
 body {
+  background-color:$backgroundColor;
+}
 
+.header {
+  height: 50px;
+  background-color: $headerColor;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+  /* border-bottom: 2px solid $borderFontColor; */
+}
+
+.headerElement {
+  height: 100%;
+  font-size: 25px;
+  color: $borderFontColor;
+  text-align: center;
+}
+.headerElement:hover {
+  background-color: $backgroundColor;
+  cursor: pointer;
+}
+.socialBoxes {
+  height: 100%;
+  background-color: $borderFontColor;
+  border: 2px;
+  border-style: solid;
+  border-color: red;
 }
