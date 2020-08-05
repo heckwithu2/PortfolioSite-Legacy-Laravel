@@ -12,5 +12,5 @@ use App\Finder;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'finderController@show');
+//Route::get('/menu', 'homeController@store');
 Route::get('/home', 'homeController@home');

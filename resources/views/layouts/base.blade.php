@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
 
 {{--    --------------------------------------------------------------------------}}
-    {{-- <link rel="stylesheet" type="text/css" href="{{asset('css/test.css')}}"> --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('css/test.css')}}">
     {{--    --------------------------------------------------------------------------}}
 
     <div class="container-fluid ">
@@ -17,9 +17,12 @@
     
 </head>
 
-
  <script>
-        var headerNames = ["Home", "Projects", "Resume", "Social"];
+        
+        
+
+        //var headerNames[] = ;
+        //var headerNames = ["Home", "Projects", "Resume", "Social"];
         var icons = ["GitHub", "LinkedIn"];
         //make my Menu
         function headerMenu( headerArray, icons ) {
@@ -40,7 +43,7 @@
             }
             document.getElementById("headerRow").innerHTML = menu;
         }
-        headerMenu(headerNames, icons);
+        //headerMenu(headerNames, icons);
 
         //make dropdowns for menu
         
