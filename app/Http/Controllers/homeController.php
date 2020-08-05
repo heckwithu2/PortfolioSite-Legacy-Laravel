@@ -14,12 +14,19 @@ class homeController extends Controller
     //default for website
     public function home() {
 
+      //grab JSON
       $names = Finder::get('name');
-      $menuArray = json_decode($names, true);
+      $rawMenuArray = json_decode($names, true);
       
+      ////take what I want from JSON
+      $menuArray = array();
+      for ($i = 0;$i < count($rawMenuArray); $i++) {
+        $menuArray[$i] = $rawMenuArray[$i]['name'];
+      } 
+      
+      //send Clean array to member to create menu
       $makeMenu = new MegaMenu;
-      $makeMenu->menuCreation();
-
+      $makeMenu->menuCreation($menuArray);
       
       return view('homepage');
     }
