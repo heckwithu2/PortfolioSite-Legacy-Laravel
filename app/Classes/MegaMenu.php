@@ -22,7 +22,7 @@ class MegaMenu {
     
     //create megaMenu
     function menuCreation() {
-       
+        
         echo "<div class='container-fluid'>";
         echo "<div id='headerRow' class='row p-0 header'>"; 
 
@@ -31,7 +31,7 @@ class MegaMenu {
             //build parent menu elements
             echo "<div id='header' class='col-3 headerElement container-fluid '>";
             echo "<div class='row headerRow'>";
-            echo "<div class='col-12 dropdownContent'>". $this->headerArray[$i];
+            echo "<div id='" . $this->headerArray[$i] . "'onclick='routeParent(this.innerHTML)' class='col-12 dropdownContent'>". $this->headerArray[$i];
             echo "</div></div>";
             
             
@@ -57,12 +57,14 @@ class MegaMenu {
             //clean raw JSON
             $tmp = json_decode($rawCats, true);
             $subCats = array();
+            $parentName = $this->headerArray[$i];
+
             if (count($tmp) > 0) {
                 for ($x = 0;$x < count($tmp);++$x) {
                     $subCats[$i] = $tmp[$x]['sub_name'];
                     //add child elements to curent parent
                     echo "<div class='row dropdownRow '>";
-                    echo "<div class='col-12 dropdownContent'>" . $subCats[$i];
+                    echo "<div id='" . $this->headerArray[$i] . "'onclick='routeChild(this.innerHTML,this.id)' class='col-12 dropdownContent'>" . $subCats[$i];
                     echo "</div></div>";
                 }
             }

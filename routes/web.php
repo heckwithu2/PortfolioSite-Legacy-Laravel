@@ -14,4 +14,9 @@ use App\Finder;
 */
 //Route::get('/menu', 'homeController@store');
 Route::get('/', 'baseController@base');
-Route::get('/home', 'homeController@home');
+
+Route::get('/Home', 'pageController@home');
+
+Route::get('/Portfolio', 'pageController@portfolio');
+
+Route::get('/About', 'pageController@about');
