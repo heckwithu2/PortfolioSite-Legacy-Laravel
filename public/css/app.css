@@ -10934,10 +10934,14 @@ a.text-dark:focus {
 }
 
 * {
-  font-family: "Century Gothic";
+  font-family: "Gill Sans", sans-serif;
+  letter-spacing: -1px;
+  line-height: normal;
+  -webkit-font-kerning: none;
+          font-kerning: none;
   /* transition-timing-function: ease-in-out; */
   transition-duration: 0.1s;
-  text-transform: capitalize;
+  font-weight: 0;
 }
 
 body {
@@ -10986,7 +10990,8 @@ body {
 }
 
 .dropdownContent {
-  padding-top: 5px;
+  padding-top: 10px;
+  text-transform: uppercase;
 }
 
 .headerElement:hover {
@@ -11044,18 +11049,20 @@ body {
 
 .titleRow {
   background-color: #2a2e3c;
+  text-transform: capitalize;
 }
 
 .title {
   color: #e1e3ea;
   font-size: 25px;
+  text-transform: capitalize;
 }
 
 .footerRow {
+  text-align: center;
   background-color: #12141a;
   bottom: 0px;
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
 }
 
 .footerText {
@@ -11065,5 +11072,21 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 15px;
+}
+
+.iconRow {
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  padding: 5px;
+  margin-left: 2.5px;
+  position: relative;
+  z-index: 2;
+  max-height: 50px;
+  max-width: 50px;
+  min-height: 35px;
+  min-width: 35px;
 }
 

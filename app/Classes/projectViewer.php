@@ -47,7 +47,7 @@ class projectViewer {
             echo "<div class='container-fluid'>";
             echo "<div class='row titleRow'>";
             echo "<div class='col-4 text-center title'>";
-            echo "More Projects";
+            echo "More " . $nameArray[$i];
             echo "</div>";
             echo "<div class='col-8 text-center title'>";
             echo $nameArray[$i];

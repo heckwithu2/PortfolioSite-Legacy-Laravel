@@ -19,4 +19,4 @@ Route::get('/Home', 'pageController@home');
 
 Route::get('/Portfolio', 'pageController@portfolio');
 
-Route::get('/About', 'pageController@about');
+Route::get('/Resume', 'pageController@about');

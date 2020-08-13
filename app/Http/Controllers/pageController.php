@@ -22,7 +22,7 @@ class pageController extends Controller
     
     public function about() {
         
-        return view('about');
+        return view('resume');
     }
 
 }

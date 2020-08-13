@@ -27,11 +27,20 @@ class MegaMenu {
         for ($i = 0;$i < count($this->headerArray);++$i) {
             //build parent menu elements
             echo "<div id='header' class='col-3 headerElement container-fluid '>";
-            echo "<div class='row headerRow'>";
-            echo "<div id='" . $this->headerArray[$i] . "'onclick='routeParent(this.innerHTML)' class='col-12 dropdownContent'>". $this->headerArray[$i];
-            echo "</div></div>";
-            
-            
+        
+            if ($this->headerArray[$i] != "Nothing") {
+                echo "<div class='row headerRow'>";
+                echo "<div id='" . $this->headerArray[$i] . "'onclick='routeParent(this.innerHTML)' class='col-12 dropdownContent'>". $this->headerArray[$i];
+                echo "</div></div>";
+            } else {
+                echo "<div class=' container'>";
+                echo "<div class=' iconRow d-flex justify-content-end'>";
+                echo    "<a href='https://github.com/heckwithu2?tab=projects'><img class='icon img-fluid' src='images/github.png'></a>";
+                echo    "<a href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/'><img class='icon img-fluid' src='images/linkedin.png'> </a>";                        
+                echo    "<a href='mailto: jheck10@kent.edu'><img class='icon img-fluid' src='images/gmail.png'></a>";
+                echo "</div>";
+                echo "</div>";
+            }            
 
             
                 //grab id of the parent menu
