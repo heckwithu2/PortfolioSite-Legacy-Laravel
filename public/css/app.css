@@ -10937,46 +10937,47 @@ a.text-dark:focus {
   font-family: "Century Gothic";
   /* transition-timing-function: ease-in-out; */
   transition-duration: 0.1s;
+  text-transform: capitalize;
 }
 
 body {
-  background-color: #2c303a;
+  background-color: #12141a;
 }
 
 .header {
   height: 50px;
-  background-color: #12141a;
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0px;
+  top: 0px;
+  background-color: #1f232d;
+  z-index: 2;
+  box-shadow: 0px 5px 15px #697496;
 }
 
 .headerElement {
   height: 50px;
-  color: #e1e7f5;
+  color: #e1e3ea;
   text-align: center;
   width: inherit;
   background-color: inherit;
   height: inherit;
 }
 
-.headerElement:hover {
-  cursor: pointer;
-}
-
 .socialBoxes {
   height: 100%;
-  background-color: #e1e7f5;
+  background-color: #e1e3ea;
 }
 
 .dropdownRow {
-  background-color: #12141a;
-  color: #12141a;
+  background-color: #1f232d;
+  color: #1f232d;
   height: 0px;
   width: inherit;
   font-size: 0px;
-  z-index: 1px;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  /* border: solid #1f232d 0px; */
 }
 
 .headerRow {
@@ -10984,18 +10985,85 @@ body {
   font-size: 25px;
 }
 
-.headerElement:hover .dropdownRow {
-  color: #e1e7f5;
-  height: 50px;
-  font-size: 20px;
-}
-
 .dropdownContent {
   padding-top: 5px;
 }
 
-.dropdownContent:hover {
-  background-color: #424857;
+.headerElement:hover {
   cursor: pointer;
+}
+
+.headerElement:hover .dropdownRow {
+  color: #e1e3ea;
+  height: 50px;
+  font-size: 20px;
+}
+
+.dropdownContent:hover {
+  background-color: #697496;
+  cursor: pointer;
+}
+
+.projectBox {
+  background-color: #2a2e3c;
+  min-height: 250px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 40px;
+  position: relative;
+  z-index: -1;
+}
+
+.innerProjectBox {
+  background-color: #34394b;
+  min-height: 250px;
+  white-space: normal;
+}
+
+.colPaddingMiddle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.colPaddingLeft {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.colPaddingRight {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.titleRow {
+  background-color: #2a2e3c;
+}
+
+.title {
+  color: #e1e3ea;
+  font-size: 25px;
+}
+
+.footerRow {
+  background-color: #12141a;
+  bottom: 0px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.footerText {
+  color: #e1e3ea;
+  text-align: center;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 

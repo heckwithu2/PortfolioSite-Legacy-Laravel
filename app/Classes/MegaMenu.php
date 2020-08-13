@@ -2,7 +2,7 @@
 
 namespace App\Classes;
 
-use App\Finder;
+use App\Menu;
 use Illuminate\Support\Facades\DB;
 
 class MegaMenu {
@@ -11,7 +11,7 @@ class MegaMenu {
 
     function __construct() {
         //make array out of parent names in header
-        $names = Finder::get('name');
+        $names = Menu::get('name');
         $rawMenuArray = json_decode($names, true);
         $menuArray = array();
         for ($i = 0;$i < count($rawMenuArray); $i++) {
@@ -22,10 +22,7 @@ class MegaMenu {
     
     //create megaMenu
     function menuCreation() {
-        
-        echo "<div class='container-fluid'>";
         echo "<div id='headerRow' class='row p-0 header'>"; 
-
         //display menu from server
         for ($i = 0;$i < count($this->headerArray);++$i) {
             //build parent menu elements
@@ -70,19 +67,8 @@ class MegaMenu {
             }
             echo "</div>";
         }
-
-        echo "</div></div>"; 
+        echo "</div>";
     }   
-
-    // private function getParentId(string $parentname) {
-
-
-    //     return $parentId;
-    // }
-
-    // private function getsubCatArray($parentId) {
-
-    // }
 }
 
 ?>
