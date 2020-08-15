@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Jeremiah Heck's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="http://app.test/css/app.css">
-    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -23,17 +23,28 @@
                 }
 
                 function routeChild( childString, parentString) {
-                    window.location = "/" + parentString + "/" + childString;
+                    //window.location = "/" + parentString + "/" + childString;
                 }
             </script>
             
-            @yield('content')
-            <div class="col-12 row footerRow">
-                <div class="col-12 footerText">
+            
+            
+
+            <div id="footer" class="row footerRow">
+               <div id="bottomLeftFooter" class="col">
+                    
+               </div>
+                <div class="col-8 footerText">
                         Made with the Laravel Framework
-                <img class="icon" src="/images/laravel.png">
+                        <img class=" footerIcon img-fluid" src="images/laravel.png">
+                </div>
+                <div id="bottomRightFooter" class="col">
+                   
                 </div>
             </div>
+
+
+            @yield('content')
         </div> 
     </body>
 </html>

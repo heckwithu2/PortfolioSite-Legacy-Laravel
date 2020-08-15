@@ -10933,6 +10933,10 @@ a.text-dark:focus {
   }
 }
 
+/* ------------------------------------------
+Universal
+----------------------------------------- */
+
 * {
   font-family: "Gill Sans", sans-serif;
   letter-spacing: -1px;
@@ -10945,8 +10949,12 @@ a.text-dark:focus {
 }
 
 body {
-  background-color: #12141a;
+  background-color: #15171e;
 }
+
+/* ------------------------------------------
+Normal Header Menu 
+----------------------------------------- */
 
 .header {
   height: 50px;
@@ -10959,29 +10967,22 @@ body {
 }
 
 .headerElement {
-  height: 50px;
+  max-height: 50px;
   color: #e1e3ea;
   text-align: center;
-  width: inherit;
   background-color: inherit;
   height: inherit;
-}
-
-.socialBoxes {
-  height: 100%;
-  background-color: #e1e3ea;
+  display: block;
 }
 
 .dropdownRow {
   background-color: #1f232d;
   color: #1f232d;
   height: 0px;
-  width: inherit;
   font-size: 0px;
   text-align: center;
   position: relative;
   z-index: 2;
-  /* border: solid #1f232d 0px; */
 }
 
 .headerRow {
@@ -11007,44 +11008,142 @@ body {
 .dropdownContent:hover {
   background-color: #697496;
   cursor: pointer;
+  border: solid 1px #b4bacb;
 }
 
-.projectBox {
-  background-color: #2a2e3c;
-  min-height: 250px;
-  margin-bottom: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 40px;
+/* ------------------------------------------
+Footer 
+----------------------------------------- */
+
+.footerRow {
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  background-color: #1f232d;
+  z-index: 3;
+  bottom: 0px;
+  position: fixed;
+}
+
+.footerText {
+  color: #e1e3ea;
+  text-align: center;
+  font-style: italic;
+  padding: 5px;
+  font-size: 15px;
+  display: block;
+}
+
+/* ------------------------------------------
+Icons 
+----------------------------------------- */
+
+.iconRow {
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  padding: 5px;
+  margin-left: 2.5px;
+  position: relative;
+  z-index: 2;
+  height: inherit;
+  max-height: 5vh;
+  min-height: 50px;
+  border: solid 1px #1f232d;
+  display: block;
+}
+
+.socialIcon:hover {
+  border: solid 1px #b4bacb;
+  background-color: #697496;
+}
+
+.homeIcon {
+  background-color: #1f232d;
+  border: solid 3px #1f232d;
+  max-width: 60px;
+  display: block;
+}
+
+.homeIcon:hover {
+  border: solid 1px #b4bacb;
+  background-color: #697496;
+}
+
+.footerIcon {
+  max-width: 50px;
+}
+
+/* ------------------------------------------
+Left side menu 
+----------------------------------------- */
+
+.portfolioMenu {
+  min-width: 420px;
+  width: 100%;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  z-index: 2;
+  display: block;
+  height: 95%;
+}
+
+.portfolioList {
+  display: block;
+  background-color: #c3c8d5;
+  height: 95%;
+  position: relative;
+  z-index: -1;
+  border-right: solid 1px #1f232d;
+}
+
+.portfolioHeader {
+  border-bottom: solid 2px #1f232d;
+  background-color: #1f232d;
+  min-height: 45px;
+  min-height: 5%;
+  background-color: #1f232d;
+  z-index: 2;
+  border-right: solid 2px #1f232d;
+  visibility: visible;
+}
+
+/* ------------------------------------------
+Right side menu 
+----------------------------------------- */
+
+.projectViewer {
+  background-color: #e1e3ea;
+  height: 5000px;
   position: relative;
   z-index: -1;
 }
 
-.innerProjectBox {
-  background-color: #34394b;
-  min-height: 250px;
-  white-space: normal;
+.projectTitleBox {
+  background-color: #e1e3ea;
+  height: auto;
+  min-height: 10%;
 }
 
-.colPaddingMiddle {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
+.projectDetailsBox {
+  background-color: #e1e3ea;
+  height: auto;
+  min-height: 30%;
 }
 
-.colPaddingLeft {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 5px;
+.projectPictureBox {
+  background-color: #e1e3ea;
+  height: auto;
+  min-height: 50%;
 }
 
-.colPaddingRight {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 10px;
+.projectFooterBox {
+  background-color: #e1e3ea;
+  height: auto;
+  min-height: 10%;
 }
 
 .titleRow {
@@ -11058,35 +11157,96 @@ body {
   text-transform: capitalize;
 }
 
-.footerRow {
-  text-align: center;
-  background-color: #12141a;
-  bottom: 0px;
-  position: relative;
-}
+/* ------------------------------------------
+Buttons 
+----------------------------------------- */
 
-.footerText {
+.hideButton {
+  margin: 5px;
+  background-color: #1f232d;
+  height: inherit;
+  min-width: 40px;
   color: #e1e3ea;
-  text-align: center;
-  font-style: italic;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 1%;
+  bottom: 10%;
+  z-index: 4;
+  border: solid #1f232d 2px;
 }
 
-.iconRow {
-  position: relative;
-  z-index: 2;
+.hideButton:hover {
+  margin: 5px;
+  min-width: 40px;
+  height: inherit;
+  color: #e1e3ea;
+  font-size: 12px;
+  cursor: pointer;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 1%;
+  bottom: 10%;
+  z-index: 4;
+  border: solid #e1e3ea 1px;
 }
 
-.icon {
+.iconHider {
   padding: 5px;
   margin-left: 2.5px;
   position: relative;
   z-index: 2;
-  max-height: 50px;
-  max-width: 50px;
-  min-height: 35px;
-  min-width: 35px;
+  height: inherit;
+  max-height: 5vh;
+  min-width: 50px;
+}
+
+/* ------------------------------------------
+Text menu 
+----------------------------------------- */
+
+.subcategoryRow {
+  border: solid 1px inherit;
+  background-color: #b4b9cb;
+  position: relative;
+  z-index: 999;
+}
+
+.subcategoryRow:hover {
+  background-color: #697496;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.subcategoryTitle {
+  margin: 5px;
+  padding: 5px;
+  font-size: 25px;
+  color: #1f232d;
+  text-align: left;
+  position: relative;
+  z-index: 999;
+}
+
+.projectRow {
+  height: 0px;
+  font-size: 0px;
+}
+
+.subcategoryRow:hover .projectRow {
+  height: 25px;
+  font-size: 25px;
+}
+
+/* ------------------------------------------
+Dynamic FOR PORTFOLIO ONLY?
+----------------------------------------- */
+
+@media only screen and (max-width: 1075px) {
+  .footerText {
+    display: none;
+  }
 }
 
