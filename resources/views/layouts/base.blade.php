@@ -29,7 +29,7 @@
                 }
 
                 function routeChild( childString, parentString) {
-                    window.location = "/" + parentString + "#" + childString;
+                    window.location = "/" + parentString + "/#" + childString;
                 }
             </script>
             

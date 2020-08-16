@@ -78,29 +78,33 @@ class projectViewer {
         echo "</div>";
         echo "</div>";
 
-        echo "<div id='portfolioList' class='row portfolioList'>";
+        echo "<div onload='loadCategoryProject(), onLoadOpenCategory()' id='portfolioList' class='row portfolioList'>";
         echo "<div class='col-12 container-fluid '>";
 
 
 
         for ($i = 1;$i < count($this->subcategoriesArray);++$i) {
             echo "<div  class='row categoryRow p-0'>";
-                echo "<a href='#" . $nameArray[$i] . "'><div class='col-12 categoryTitle'>";
+                
+                    echo "<div class='col-12 categoryTitle'>";
+                    echo "<a id='" . $nameArray[$i] . "' onclick='categoryToProject(" . $nameArray[$i] .")' href='#" . $nameArray[$i] . "'>";
                     echo "<p  class='categoryText'>" . $nameArray[$i] . "</p>";
+                        
                         $projects = array();
                         $projects = projectViewer::projectsForCategory( $this->subcategoriesArray[$nameArray[$i]] );
-                            for ($x = 0;$x < count($projects);++$x) {
-                                //subcategory here
-                                echo "<a href='#" . $nameArray[$i] . "/" . $projects[$x]['name'] . "'>";
-                                    echo "<div class='col-12 subcategoryTitle' onclick='displayProject(" . $projects[$x]['name'] . ")' >";
-                                        echo "<ul id='" . $projects[$x]['name'] . "'>";
+                            
+                         for ($x = 0;$x < count($projects);++$x) {
+                                 //subcategory here
+                                 echo "<a id='" . $projects[$x]['name'] . "' onclick='displayProject(" . $projects[$x]['name'] . ")' href='#" . $nameArray[$i] . "/" . $projects[$x]['name'] . "'>";
+                                     echo "<div class='col-12 subcategoryTitle'>";
+                                         echo "<ul >";
                                 
-                                            echo $projects[$x]['name'];
+                                             echo $projects[$x]['name'];
                                 
-                                        echo "</ul>"; 
-                                    echo "</div>";
-                                echo "</a>";
-                            }
+                                         echo "</ul>"; 
+                                     echo "</div>";
+                                 echo "</a>";
+                         }
             echo "</div></a>";
             echo "</div>";
             //subSub

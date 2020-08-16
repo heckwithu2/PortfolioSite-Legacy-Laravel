@@ -15,19 +15,29 @@ Make scaffolding --}}
             //grab categories array and Projects array from php
             var categories = <?php echo json_encode($categories); ?>;
             var projects = <?php echo json_encode($projects); ?>;
-            //display data of given project
+            //display data of given project name
             function displayProject( project ) {
+                
+            }
+             
+            function categoryToProject( category ) {
+                //given category, find first project
+                //displayProject( project )
+            }
 
+             //display default project depending on URL
+            function loadCategoryProject() {
+                //parse URL for name of category
+                //get category name, if none give default
+
+                //categoryToProject( category )
             }
-             //display default project
-            function defaultCategoryProject( category ) {
-                //displayProject();
+
+            //OPEN LIST FOR ACTIVATED PROJECT
+            //page load open whatever is displayed
+            function onLoadOpenCategory() {
+                //WHEN PROJECT IS LOADED, ACTIVATE THE ITEM WITH THAT ID IN THE LIST
             }
-            //display default project
-            function defaultProject( defaultProject ) {
-                //displayProject();
-            }
-            
 
             //dynamic width of portfolio
             function viewerWidth( num ) {
