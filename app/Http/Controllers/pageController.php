@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Classes\MegaMenu;
+use App\Classes\projectViewer;
 use App\Finder;
 
 class pageController extends Controller
@@ -16,8 +17,13 @@ class pageController extends Controller
     }
 
     public function portfolio() {
-
-        return view('portfolio');
+        $projectData = new projectViewer;
+        $categories = array();
+        $projects = array();
+       
+        $categories = $projectData->subcategoriesArray;
+        $projects = $projectData->fullProjectsArray;
+        return view('portfolio', compact('categories','projects'));
     }
     
     public function about() {

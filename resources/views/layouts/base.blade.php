@@ -9,6 +9,12 @@
 
     <body>
         <div class="container-fluid">
+
+            <div id="nameRow" class="row p-0 nameRow">
+                <div class="col-12 nameText text-center">
+                    JEREMIAH HECK
+                </div>
+            </div>
             
                 @php
                 $makeMenu = new App\Classes\MegaMenu;
@@ -23,7 +29,7 @@
                 }
 
                 function routeChild( childString, parentString) {
-                    //window.location = "/" + parentString + "/" + childString;
+                    window.location = "/" + parentString + "#" + childString;
                 }
             </script>
             
@@ -35,8 +41,8 @@
                     
                </div>
                 <div class="col-8 footerText">
-                        Made with the Laravel Framework
-                        <img class=" footerIcon img-fluid" src="images/laravel.png">
+                       Made with the Laravel Framework
+                        <a href="https://laravel.com/"> <img class=" footerIcon img-fluid" src="images/laravel.png"></a>
                 </div>
                 <div id="bottomRightFooter" class="col">
                    
