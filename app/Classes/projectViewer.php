@@ -83,7 +83,7 @@ class projectViewer {
 
 
 
-        for ($i = 1;$i < count($this->subcategoriesArray);++$i) {
+        for ($i = 1;$i < count($this->subcategoriesArray)+1;++$i) {
             echo "<div  class='row categoryRow p-0'>";
                 
                     echo "<div class='col-12 categoryTitle'>";
@@ -94,8 +94,9 @@ class projectViewer {
                         $projects = projectViewer::projectsForCategory( $this->subcategoriesArray[$nameArray[$i]] );
                             
                          for ($x = 0;$x < count($projects);++$x) {
+                            $name = $projects[$x]['name'];
                                  //subcategory here
-                                 echo "<a id='" . $projects[$x]['name'] . "' onclick='displayProject(" . $projects[$x]['name'] . ")' href='#" . $nameArray[$i] . "/" . $projects[$x]['name'] . "'>";
+                                 echo "<a id='" . $projects[$x]['name'] . "' href='#" . $nameArray[$i] . "/" . $name . "' onclick='displayProject(this.id)'>";
                                      echo "<div class='col-12 subcategoryTitle'>";
                                          echo "<ul >";
                                 
@@ -118,33 +119,28 @@ class projectViewer {
         echo "<div id='projectViewer' class='col projectViewer'>";
         echo "<div class='container-fluid p-0'>";
         echo "<div class='row projectTitleBox'>";
-            echo "<div class='col-12 text-center projectBox'>";
+            echo "<div id='titleProject' class='col-12 text-center projectBox'>";
 
             echo "</div>";
         echo "</div>";
         echo "<div class='row projectDetailsBox'>";
-            echo "<div class='col-6 text-center projectBox'>";
+            echo "<div id='techProject' class='col-3 text-center projectBox'>";
 
             echo "</div>";
-            echo "<div class='col-6 text-center projectBox'>";
+            echo "<div id='descProject' class='col-6 text-center projectBox'>";
+
+            echo "</div>";
+            echo "<div id='gitDownProject' class='col-3 text-center projectBox'>";
 
             echo "</div>";
         echo "</div>";
         echo "<div class='row projectPictureBox'>";
-            echo "<div class='col-6 text-center projectBox'>";
-
-            echo "</div>";
-            echo "<div class='col-6 text-center projectBox'>";
+            echo "<div id='picProject' class='col-12 text-center projectBox'>";
 
             echo "</div>";
         echo "</div>";
-        echo "<div class='row projectFooterBox d-flex' >";
-            echo "<div class='col-6 text-center projectBox'>";
-
-            echo "</div>";
-            echo "<div class='col-6 text-center projectBox'>";
-
-            echo "</div>";
+        echo "<div class='row projectFooterBox' >";
+            
         echo "</div>";
         echo "</div>";
         echo "</div>";

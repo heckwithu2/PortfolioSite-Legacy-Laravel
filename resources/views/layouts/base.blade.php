@@ -25,7 +25,10 @@
             <script type="text/javascript">
 
                 function routeParent( parentString ) {
+                    
                     window.location = "/" + parentString;
+                  
+                   
                 }
 
                 function routeChild( childString, parentString) {

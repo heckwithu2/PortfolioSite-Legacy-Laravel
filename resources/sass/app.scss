@@ -43,7 +43,7 @@ border-bottom: solid 1px #1f232d;
 margin-top: 7px;
 font-size: 40px;
 font-weight: bolder;
-color: #1f232d;
+color: #e1e3ea;
 text-align: center;
 
 }
@@ -233,15 +233,26 @@ visibility: visible;
 Right side menu 
 ----------------------------------------- */ 
 .projectBox {
-height: 50px;
+height: auto;
 background-color: #d2d5e0;
 padding : 5px;
+position: relative;
+z-index: 5;
+
 }
 
+.projectTextTitle {
+  font-size: 30px;
+}
+
+.projectText {
+  color:  #1f232d;
+  font-size: 20px;
+}
 
 .projectViewer {
 background-color: #e1e3ea;
-height: 5000px;
+height: auto;
 position: absolute;
 top: 60px;
 right: 0px;
@@ -254,23 +265,30 @@ width: 75%;
 background-color:#e1e3ea;
 height: auto;
 min-height: 10%;
+margin: 15px;
+border: solid 1px #7881a1;
 }
+
 .projectDetailsBox {
 background-color:#e1e3ea;
 height: auto;
 min-height: 30%;
-
+margin: 15px;
+border: solid 1px #7881a1;
 }
+
 .projectPictureBox {
 background-color:#e1e3ea;
 height: auto;
 min-height: 50%;
-
+margin: 15px;
+border: solid 1px #7881a1;
 }
+
 .projectFooterBox {
 background-color:#e1e3ea;
 height: auto;
-min-height: 10%;
+min-height: 5%;
 
 }
 
@@ -348,10 +366,7 @@ padding: 0px;
 margin: 0px;
 }
 
-.categoryText:hover  {
-padding-left: 50x;
 
-}
 .categoryText {
 margin: 5px;
 padding: 5px;
@@ -365,6 +380,7 @@ color: #000000;
 
 }
 
+
 .subcategoryTitle {
 border-top: solid 1px inherit;
 border-bottom: solid 1px inherit;
@@ -372,6 +388,7 @@ padding: 0px;
 height: 0px;
 background-color: #e1e3ea;
 font-size: 0px;
+color: inherit;
 }
 
 .subcategoryTitle:hover {
@@ -386,6 +403,7 @@ color: #000000;
 height: 25px;
 font-size: 18px;
 }
+
 
 /* ------------------------------------------
 Dynamic FOR PORTFOLIO ONLY?

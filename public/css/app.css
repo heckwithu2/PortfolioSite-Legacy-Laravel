@@ -10971,7 +10971,7 @@ Name Header
   margin-top: 7px;
   font-size: 40px;
   font-weight: bolder;
-  color: #1f232d;
+  color: #e1e3ea;
   text-align: center;
 }
 
@@ -11152,14 +11152,25 @@ Right side menu
 ----------------------------------------- */
 
 .projectBox {
-  height: 50px;
+  height: auto;
   background-color: #d2d5e0;
   padding: 5px;
+  position: relative;
+  z-index: 5;
+}
+
+.projectTextTitle {
+  font-size: 30px;
+}
+
+.projectText {
+  color: #1f232d;
+  font-size: 20px;
 }
 
 .projectViewer {
   background-color: #e1e3ea;
-  height: 5000px;
+  height: auto;
   position: absolute;
   top: 60px;
   right: 0px;
@@ -11172,24 +11183,30 @@ Right side menu
   background-color: #e1e3ea;
   height: auto;
   min-height: 10%;
+  margin: 15px;
+  border: solid 1px #7881a1;
 }
 
 .projectDetailsBox {
   background-color: #e1e3ea;
   height: auto;
   min-height: 30%;
+  margin: 15px;
+  border: solid 1px #7881a1;
 }
 
 .projectPictureBox {
   background-color: #e1e3ea;
   height: auto;
   min-height: 50%;
+  margin: 15px;
+  border: solid 1px #7881a1;
 }
 
 .projectFooterBox {
   background-color: #e1e3ea;
   height: auto;
-  min-height: 10%;
+  min-height: 5%;
 }
 
 .titleRow {
@@ -11267,10 +11284,6 @@ Text menu
   margin: 0px;
 }
 
-.categoryText:hover {
-  padding-left: 50x;
-}
-
 .categoryText {
   margin: 5px;
   padding: 5px;
@@ -11290,6 +11303,7 @@ Text menu
   height: 0px;
   background-color: #e1e3ea;
   font-size: 0px;
+  color: inherit;
 }
 
 .subcategoryTitle:hover {

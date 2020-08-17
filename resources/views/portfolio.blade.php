@@ -12,12 +12,34 @@ Make scaffolding --}}
     @endphp
 
       <script >
-            //grab categories array and Projects array from php
-            var categories = <?php echo json_encode($categories); ?>;
-            var projects = <?php echo json_encode($projects); ?>;
             //display data of given project name
             function displayProject( project ) {
-                
+               //grab categories array and Projects array from php
+                //var projects = [];
+                var projects = @json($projects);
+                var categories = @json($categories);
+                 
+                for(var i = 0;i < projects.length;++i) {
+                    var projectObj = [];
+                    projectObj = projects[i];
+                    if (projectObj.name == project) {
+                        if (projectObj.name != null) {
+                            document.getElementById("titleProject").innerHTML = "<h1 class='projectTextTitle'>" + projectObj.name + "</h1>";
+                        }
+                        if (projectObj.technology != null) {
+                            document.getElementById("techProject").innerHTML = "<h2 class='projectText'>" + projectObj.technology + "</h2>";
+                        }
+                        if (projectObj.description != null) {
+                            document.getElementById("descProject").innerHTML = "<h2 class='projectText'>" + projectObj.description + "</h2>";
+                        }
+                        if (projectObj.picture != null) {
+                           document.getElementById("picProject").innerHTML = "<p class='projectText'>" + projectObj.picture + "</p>";
+                        }
+                        if (projectObj.github != null) {
+                            document.getElementById("gitDownProject").innerHTML = "<a href='" + projectObj.github + "'>" + projectObj.github + "</a>";
+                        }
+                    }
+                }
             }
              
             function categoryToProject( category ) {
@@ -61,7 +83,7 @@ Make scaffolding --}}
                 document.getElementById("li").style.display  = "none";
                 document.getElementById("mail").style.display  = "none";
                 document.getElementById("bottomLeftFooter").innerHTML = "<button class='hideButton' onclick='showMenu()' ><img class='iconHider img-fluid' src='images/menu.png'>SHOW MENU</button>";
-                viewerWidth(1);
+                viewerWidth(.99);
             }
             //show function 
             function showMenu() {
@@ -80,6 +102,7 @@ Make scaffolding --}}
             
             //remove old menu
             document.getElementById("headerRow").style.display = "block";
+            
             document.getElementById("headerRow").style.display = "none";
 
         </script>

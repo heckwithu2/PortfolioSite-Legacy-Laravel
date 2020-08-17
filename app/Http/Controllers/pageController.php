@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Classes\MegaMenu;
 use App\Classes\projectViewer;
 use App\Finder;
+use Symfony\Component\HttpFoundation\Response;
 
 class pageController extends Controller
 {
@@ -23,12 +24,15 @@ class pageController extends Controller
        
         $categories = $projectData->subcategoriesArray;
         $projects = $projectData->fullProjectsArray;
-        return view('portfolio', compact('categories','projects'));
+
+        return view('portfolio', compact('categories', 'projects'));
     }
     
     public function about() {
-        
-        return view('resume');
+        $filename = 'Resume.pdf';
+        $path = storage_path($filename);
+
+        return response()->file($path);
     }
 
 }
