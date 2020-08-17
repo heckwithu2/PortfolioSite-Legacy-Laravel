@@ -78,6 +78,20 @@ Make scaffolding --}}
             
             window.onload = function () {
                 var url = window.location.hash;
+                
+                var capitals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (i = 0; i < capitals.length; ++i) {
+                    for (x = 0; x < url.length; ++x) {
+                        if (url[x] == capitals[i]) {
+                            var left = url.substr(0,x);
+                            var right = url.substr(x,url.length-1);
+                            var space = ' ';
+                            url = left + space + right;
+                            break;
+                        }
+                    }
+                }
+                
                 var pos = url.search("/");
                 if (pos != -1) {
                     var lengthUrl = url.length-1;
@@ -85,7 +99,7 @@ Make scaffolding --}}
                     displayProject( trimmedUrl );
                 } else {
                     var lengthUrl = url.length-1;
-                    var trimmedUrl = url.substr(1,lengthUrl);
+                    var trimmedUrl = url.substr(2,lengthUrl);
                     categoryToProject( trimmedUrl );
                 }
                 
