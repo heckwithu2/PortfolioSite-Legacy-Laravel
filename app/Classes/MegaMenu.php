@@ -24,11 +24,12 @@ class MegaMenu {
     function menuCreation() {
         echo "<div id='headerRow' class='row p-0 header'>"; 
         //display menu from server
-        for ($i = 0;$i < count($this->headerArray);++$i) {
+        for ($i = 1;$i < count($this->headerArray);++$i) {
             //build parent menu elements
-            echo "<div class='col-3 headerElement container-fluid '>";
+            echo "<div class='col headerElement container-fluid '>";
         
-            if ($this->headerArray[$i] != "Nothing") {
+            if ($this->headerArray[$i] != "Icons" ) {
+
                 echo "<div class='row headerRow'>";
                 echo "<div id='" . $this->headerArray[$i] . "'onclick='routeParent(this.innerHTML)' class='col-12 dropdownContent'>". $this->headerArray[$i];
                 echo "</div></div>";
@@ -66,7 +67,8 @@ class MegaMenu {
             $parentName = $this->headerArray[$i];
 
             if (count($tmp) > 0) {
-                for ($x = 0;$x < count($tmp);++$x) {
+                for ($x = 0;$x < count($tmp);++$x) {                
+
                     $subCats[$i] = $tmp[$x]['sub_name'];
                     //add child elements to curent parent
                     echo "<div class='row dropdownRow '>";

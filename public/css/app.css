@@ -10944,7 +10944,7 @@ Universal
   -webkit-font-kerning: none;
           font-kerning: none;
   /* transition-timing-function: ease-in-out; */
-  transition-duration: 0.1s;
+  transition-duration: 0s;
   font-weight: 0;
 }
 
@@ -10987,10 +10987,12 @@ Normal Header Menu
   background-color: #1f232d;
   z-index: 2;
   box-shadow: 0px 5px 15px #697496;
+  transition-duration: 0.1s !important;
 }
 
 .headerElement {
   max-height: 50px;
+  transition-duration: 0.1s !important;
   color: #e1e3ea;
   text-align: center;
   background-color: inherit;
@@ -11006,42 +11008,50 @@ Normal Header Menu
   text-align: center;
   position: relative;
   z-index: 2;
+  transition-duration: 0.1s !important;
 }
 
 .headerRow {
   height: 50px;
   font-size: 25px;
+  transition-duration: 0.1s !important;
 }
 
 .dropdownContent {
   padding-top: 10px;
   text-transform: uppercase;
+  transition-duration: 0.1s !important;
 }
 
 .headerElement:hover {
   cursor: pointer;
+  transition-duration: 0.1s !important;
 }
 
 .headerElement:hover .dropdownRow {
   color: #e1e3ea;
   height: 50px;
   font-size: 20px;
+  transition-duration: 0.1s !important;
 }
 
 .dropdownContent:hover {
   background-color: #697496;
   cursor: pointer;
   border: solid 1px #b4bacb;
+  transition-duration: 0.1s !important;
 }
 
 .headerTitle {
   border-top: solid #1f232d 6px;
   font-size: 35px;
   text-transform: uppercase;
+  transition-duration: 0.1s !important;
 }
 
 .headerTitle:hover {
   cursor: default;
+  transition-duration: 0.1s !important;
 }
 
 /* ------------------------------------------
@@ -11155,24 +11165,13 @@ Right side menu
   height: auto;
   background-color: #d2d5e0;
   padding: 5px;
-  position: relative;
-  z-index: 5;
-}
-
-.projectTextTitle {
-  font-size: 30px;
-}
-
-.projectText {
-  color: #1f232d;
-  font-size: 20px;
 }
 
 .projectViewer {
   background-color: #e1e3ea;
   height: auto;
   position: absolute;
-  top: 60px;
+  top: 0px;
   right: 0px;
   float: right;
   z-index: -1;
@@ -11218,6 +11217,23 @@ Right side menu
   color: #e1e3ea;
   font-size: 25px;
   text-transform: capitalize;
+}
+
+.nametag {
+  position: absolute;
+  bottom: 20px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: -3px;
+  font-size: 40px;
+  color: #2a2e3c;
+  opacity: 20%;
+  border-top: solid #2a2e3c 2px;
+  padding-top: 10px;
+  border-bottom: solid #2a2e3c 2px;
+  border-left: solid #c3c8d5 70px;
+  border-right: solid #c3c8d5 70px;
+  padding-bottom: 10px;
 }
 
 /* ------------------------------------------
@@ -11275,6 +11291,8 @@ Text menu
 }
 
 .categoryRow:hover {
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease-in-out !important;
   background-color: #c3c7d5;
   cursor: pointer;
 }
@@ -11290,6 +11308,8 @@ Text menu
   font-size: 25px;
   color: #34394b;
   text-align: left;
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease-in-out !important;
 }
 
 .categoryText:hover {
@@ -11304,6 +11324,9 @@ Text menu
   background-color: #e1e3ea;
   font-size: 0px;
   color: inherit;
+  transition-duration: 0.2s !important;
+  transition-delay: 0.1s !important;
+  transition-timing-function: ease-in-out !important;
 }
 
 .subcategoryTitle:hover {
@@ -11316,6 +11339,16 @@ Text menu
 .categoryTitle:hover .subcategoryTitle {
   height: 25px;
   font-size: 18px;
+}
+
+.aTagRemove {
+  color: #34394b;
+  text-decoration: none;
+}
+
+.aTagRemove:hover {
+  color: #000000;
+  text-decoration: underline;
 }
 
 /* ------------------------------------------

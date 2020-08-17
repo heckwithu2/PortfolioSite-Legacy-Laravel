@@ -24,8 +24,8 @@ class pageController extends Controller
        
         $categories = $projectData->subcategoriesArray;
         $projects = $projectData->fullProjectsArray;
-
-        return view('portfolio', compact('categories', 'projects'));
+        $nameArray = $projectData->nameArray;
+        return view('portfolio', compact('categories', 'projects', 'nameArray'));
     }
     
     public function about() {

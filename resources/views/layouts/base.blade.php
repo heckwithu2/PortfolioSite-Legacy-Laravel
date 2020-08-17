@@ -25,14 +25,16 @@
             <script type="text/javascript">
 
                 function routeParent( parentString ) {
-                    
-                    window.location = "/" + parentString;
-                  
-                   
+                    var parent = parentString.split(" ").join("");
+                    var string = "/" + parent;
+                    window.location = string;               
                 }
 
                 function routeChild( childString, parentString) {
-                    window.location = "/" + parentString + "/#" + childString;
+                    var parent = parentString.split(" ").join("");
+                    var child = childString.split(" ").join("");
+                    var string = "/" + parent + "#" + child;
+                    window.location = string;
                 }
             </script>
             

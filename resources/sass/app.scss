@@ -17,7 +17,7 @@ Universal
   line-height: normal;
   font-kerning: none;
   /* transition-timing-function: ease-in-out; */
-  transition-duration: .1s;
+  transition-duration: 0s;
   font-weight: 0;
 }
 
@@ -59,12 +59,12 @@ Normal Header Menu
   background-color: #1f232d;
   z-index: 2;
   box-shadow:0px 5px 15px #697496;
-  
+  transition-duration: .1s !important;
 }
 
 .headerElement {
   max-height: 50px;
-  
+  transition-duration: .1s !important;
   color: #e1e3ea;
   text-align: center;
   background-color: inherit;
@@ -80,43 +80,50 @@ Normal Header Menu
   text-align: center;
   position: relative;
   z-index: 2;    
+  transition-duration: .1s !important;
 }
 
 .headerRow {
   height: 50px;
   font-size: 25px;
+  transition-duration: .1s !important;
 }
 
 .dropdownContent {
   padding-top: 10px;
   text-transform: uppercase;
+  transition-duration: .1s !important;
 }
 
 .headerElement:hover {
   cursor: pointer;
+  transition-duration: .1s !important;
 }
 
 .headerElement:hover .dropdownRow {
   color: #e1e3ea;
   height:50px;
   font-size: 20px;
+  transition-duration: .1s !important;
 } 
 
 .dropdownContent:hover {
   background-color: #697496;
   cursor: pointer;  
   border: solid 1px #b4bacb;
+  transition-duration: .1s !important;
  }
 
  .headerTitle {
   border-top:solid #1f232d 6px;
   font-size: 35px;
   text-transform: uppercase;
-  
+  transition-duration: .1s !important;
  }
 
  .headerTitle:hover {
   cursor: default;
+  transition-duration: .1s !important;
  }
 /* ------------------------------------------
 Footer 
@@ -216,7 +223,6 @@ z-index: -1;
 .portfolioHeader{
 border-bottom: solid 2px #1f232d;
 background-color:#1f232d;
-
 min-height: 45px;
 min-height: 5%;
 background-color: #1f232d;
@@ -236,25 +242,14 @@ Right side menu
 height: auto;
 background-color: #d2d5e0;
 padding : 5px;
-position: relative;
-z-index: 5;
-
 }
 
-.projectTextTitle {
-  font-size: 30px;
-}
-
-.projectText {
-  color:  #1f232d;
-  font-size: 20px;
-}
 
 .projectViewer {
 background-color: #e1e3ea;
 height: auto;
 position: absolute;
-top: 60px;
+top: 0px;
 right: 0px;
 float:right;
 z-index: -1;
@@ -268,7 +263,6 @@ min-height: 10%;
 margin: 15px;
 border: solid 1px #7881a1;
 }
-
 .projectDetailsBox {
 background-color:#e1e3ea;
 height: auto;
@@ -276,7 +270,6 @@ min-height: 30%;
 margin: 15px;
 border: solid 1px #7881a1;
 }
-
 .projectPictureBox {
 background-color:#e1e3ea;
 height: auto;
@@ -284,7 +277,6 @@ min-height: 50%;
 margin: 15px;
 border: solid 1px #7881a1;
 }
-
 .projectFooterBox {
 background-color:#e1e3ea;
 height: auto;
@@ -303,7 +295,22 @@ font-size: 25px;
 text-transform: capitalize;
 }
 
-
+.nametag {
+position:absolute;
+bottom: 20px;
+text-transform: uppercase;
+font-style: italic;
+letter-spacing: -3px;
+font-size: 40px;
+color: #2a2e3c;
+opacity: 20%;
+border-top: solid #2a2e3c 2px;
+padding-top: 10px;
+border-bottom: solid #2a2e3c 2px;
+border-left: solid #c3c8d5 70px;
+border-right: solid #c3c8d5 70px;
+padding-bottom: 10px;
+}
 /* ------------------------------------------
 Buttons 
 ----------------------------------------- */ 
@@ -353,10 +360,12 @@ Text menu
 .categoryRow {
 border-bottom: solid 1px #1f232d;
 background-color: #e1e3ea;
+
 }
 
 .categoryRow:hover {
-
+transition-duration: .2s !important;
+transition-timing-function: ease-in-out !important;
 background-color: #c3c7d5;
 cursor: pointer;
 }
@@ -373,6 +382,9 @@ padding: 5px;
 font-size: 25px;
 color: #34394b;
 text-align: left;
+
+transition-duration: .2s !important;
+transition-timing-function: ease-in-out !important;
 }
 
 .categoryText:hover {
@@ -389,12 +401,14 @@ height: 0px;
 background-color: #e1e3ea;
 font-size: 0px;
 color: inherit;
+transition-duration: .2s !important;
+transition-delay: .1s !important;
+transition-timing-function: ease-in-out !important;
 }
 
 .subcategoryTitle:hover {
 border-top: solid 1px #1f232d;
 border-bottom: solid 1px #1f232d;
-
 background-color: #b4b9cb;
 color: #000000;
 }
@@ -403,6 +417,17 @@ color: #000000;
 height: 25px;
 font-size: 18px;
 }
+
+.aTagRemove {
+color: #34394b;
+text-decoration: none;
+}
+
+.aTagRemove:hover {
+color: #000000;
+text-decoration: underline;
+}
+
 
 
 /* ------------------------------------------
@@ -414,3 +439,4 @@ Dynamic FOR PORTFOLIO ONLY?
   display: none;
 }
 }
+

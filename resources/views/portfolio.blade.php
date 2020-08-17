@@ -14,11 +14,13 @@ Make scaffolding --}}
       <script >
             //display data of given project name
             function displayProject( project ) {
+                
                //grab categories array and Projects array from php
                 //var projects = [];
                 var projects = @json($projects);
+                var nameArray = @json($nameArray);
                 var categories = @json($categories);
-                 
+
                 for(var i = 0;i < projects.length;++i) {
                     var projectObj = [];
                     projectObj = projects[i];
@@ -38,29 +40,56 @@ Make scaffolding --}}
                         if (projectObj.github != null) {
                             document.getElementById("gitDownProject").innerHTML = "<a href='" + projectObj.github + "'>" + projectObj.github + "</a>";
                         }
+                        //this is the project to link to parent
+                        
+                        
+                        for (var g = 0;g < projects.length;++g) {
+                            var projectObj2 = [];
+                            projectObj2 = projects[g];
+
+                            var name = nameArray[projectObj.parent_id];//returns name
+
+
+                            if (projectObj2.parent_id == categories[name]) {
+                                var string = projectObj2.name + "Sub";
+                                document.getElementById(string).style.height = "25px";
+                                document.getElementById(string).style.fontSize = "18px";
+                            }
+                        }
                     }
                 }
             }
              
-            function categoryToProject( category ) {
+            function categoryToProject( categoryName ) {
                 //given category, find first project
-                //displayProject( project )
+                var projects = @json($projects);
+                //var nameArray = @json($nameArray);
+                var categories = @json($categories);
+
+                for(var i = 0;i < projects.length;++i) {
+                    var parentId = categories[categoryName];
+                    var projectObj = [];
+                    projectObj = projects[i];
+                    if (projectObj.parent_id == parentId) {
+                        displayProject( projectObj.name );
+                    }
+                }
             }
-
-             //display default project depending on URL
-            function loadCategoryProject() {
-                //parse URL for name of category
-                //get category name, if none give default
-
-                //categoryToProject( category )
-            }
-
-            //OPEN LIST FOR ACTIVATED PROJECT
-            //page load open whatever is displayed
-            function onLoadOpenCategory() {
-                //WHEN PROJECT IS LOADED, ACTIVATE THE ITEM WITH THAT ID IN THE LIST
-            }
-
+            
+            window.onload = function () {
+                var url = window.location.hash;
+                var pos = url.search("#");
+                //finish this 
+                //make a tags sexier
+                    //remove underline, color
+                    //activated link background color change?
+                //create mission state ment, use a new table
+                //move name on project viewer
+                //update github
+                //make picture for everything
+                //GO LIVE!
+            } 
+                            
             //dynamic width of portfolio
             function viewerWidth( num ) {
                 var w = window.innerWidth;
@@ -102,7 +131,7 @@ Make scaffolding --}}
             
             //remove old menu
             document.getElementById("headerRow").style.display = "block";
-            
+            document.getElementById("nameRow").style.visibility = "hidden";
             document.getElementById("headerRow").style.display = "none";
 
         </script>

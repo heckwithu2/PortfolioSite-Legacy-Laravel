@@ -11,6 +11,7 @@ class projectViewer {
     //grab data
     public $subcategoriesArray;
     public $fullProjectsArray;
+    public $nameArray;
 
     function __construct(){
         $names = Subcategories::all();
@@ -22,12 +23,20 @@ class projectViewer {
                 $menuArray[$i] = $idNames[$i]['sub_name'];
                 $final[$menuArray[$i]] = $idNames[$i]['id'];
             }
-          } 
-          $this->subcategoriesArray = $final;
+        } 
+        $this->subcategoriesArray = $final;
 
-          $rawProjects = Projects::all();
-          $projectsData = json_decode($rawProjects, true);
-          $this->fullProjectsArray = $projectsData;
+        $rawProjects = Projects::all();
+        $projectsData = json_decode($rawProjects, true);
+        $this->fullProjectsArray = $projectsData;
+
+        $nameArray = array();
+        $i = 0;
+        foreach ($this->subcategoriesArray as $name => $id) {
+            $nameArray[$id] = $name;
+            $i++;
+        }
+        $this->nameArray = $nameArray;
     }
 
     public function projectsForCategory( $id ) {
@@ -44,16 +53,7 @@ class projectViewer {
 
     //create basic html for viewer
     public function makeProjectViewer(){
-        $nameArray = array();
-        $i = 0;
-        foreach ($this->subcategoriesArray as $name => $id) {
-            $nameArray[$id] = $name;
-            $i++;
-        }
-
         
-        
-
         //projectsForCategory( $nameArray );
         echo "<div id='portfolioClient' class='row' >";
 
@@ -78,26 +78,30 @@ class projectViewer {
         echo "</div>";
         echo "</div>";
 
-        echo "<div onload='loadCategoryProject(), onLoadOpenCategory()' id='portfolioList' class='row portfolioList'>";
+        echo "<div id='portfolioList' class='row portfolioList'>";
         echo "<div class='col-12 container-fluid '>";
 
 
 
         for ($i = 1;$i < count($this->subcategoriesArray)+1;++$i) {
+
+            $untrimmedName = $this->nameArray[$i];
+            $trimmedName = str_replace(' ', '', $untrimmedName);
+            
             echo "<div  class='row categoryRow p-0'>";
                 
                     echo "<div class='col-12 categoryTitle'>";
-                    echo "<a id='" . $nameArray[$i] . "' onclick='categoryToProject(" . $nameArray[$i] .")' href='#" . $nameArray[$i] . "'>";
-                    echo "<p  class='categoryText'>" . $nameArray[$i] . "</p>";
+                    echo "<a class='aTagRemove' id='" . $this->nameArray[$i] . "' onclick='categoryToProject(this.id)' href='#" . $trimmedName . "'>";
+                    echo "<p  class='categoryText'>" . $this->nameArray[$i] . "</p>";
                         
                         $projects = array();
-                        $projects = projectViewer::projectsForCategory( $this->subcategoriesArray[$nameArray[$i]] );
+                        $projects = projectViewer::projectsForCategory( $this->subcategoriesArray[$this->nameArray[$i]] );
                             
                          for ($x = 0;$x < count($projects);++$x) {
                             $name = $projects[$x]['name'];
                                  //subcategory here
-                                 echo "<a id='" . $projects[$x]['name'] . "' href='#" . $nameArray[$i] . "/" . $name . "' onclick='displayProject(this.id)'>";
-                                     echo "<div class='col-12 subcategoryTitle'>";
+                                 echo "<a class='aTagRemove' id='" . $projects[$x]['name'] . "' href='#" . $trimmedName . "/" . $name . "' onclick='displayProject(this.id)'>";
+                                     echo "<div id='" . $projects[$x]['name'] . "Sub' class='col-12 subcategoryTitle'>";
                                          echo "<ul >";
                                 
                                              echo $projects[$x]['name'];
@@ -110,6 +114,9 @@ class projectViewer {
             echo "</div>";
             //subSub
          }
+         echo "</div>";
+         echo "<div class='text-center col-12 nametag'>";
+         echo "Jeremiah Heck";
          echo "</div>";
          echo "</div>";
          echo "</div>";
