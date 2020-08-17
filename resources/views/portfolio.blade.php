@@ -78,16 +78,17 @@ Make scaffolding --}}
             
             window.onload = function () {
                 var url = window.location.hash;
-                var pos = url.search("#");
-                //finish this 
-                //make a tags sexier
-                    //remove underline, color
-                    //activated link background color change?
-                //create mission state ment, use a new table
-                //move name on project viewer
-                //update github
-                //make picture for everything
-                //GO LIVE!
+                var pos = url.search("/");
+                if (pos != -1) {
+                    var lengthUrl = url.length-1;
+                    var trimmedUrl = url.substr(pos+1,lengthUrl);
+                    displayProject( trimmedUrl );
+                } else {
+                    var lengthUrl = url.length-1;
+                    var trimmedUrl = url.substr(1,lengthUrl);
+                    categoryToProject( trimmedUrl );
+                }
+                
             } 
                             
             //dynamic width of portfolio
