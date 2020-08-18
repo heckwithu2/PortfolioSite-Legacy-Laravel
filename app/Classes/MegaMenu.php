@@ -36,7 +36,7 @@ class MegaMenu {
             } else {
                 echo "<div class=' container'>";
                 echo "<div class=' iconRow d-flex justify-content-end'>";
-                echo    "<a href='https://github.com/heckwithu2?tab=projects'><img class='socialIcon icon img-fluid' src='images/github.png'></a>";
+                echo    "<a href='https://github.com/heckwithu2?tab=projects'><img class=' img-fluid socialIcon icon' src='images/github.png'></a>";
                 echo    "<a href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/'><img class='socialIcon icon img-fluid' src='images/linkedin2.png'> </a>";                        
                 echo    "<a href='mailto: jheck10@kent.edu'><img class='socialIcon icon img-fluid' src='images/gmail.png'></a>";
                 echo "</div>";
@@ -77,7 +77,12 @@ class MegaMenu {
                 }
             }
             echo "</div>";
+           
         }
+        echo "<div id='mission' class='row p-0 missionStatement'>";
+        echo "<div class='col-12 missionStatementText '>";
+        echo   "My name is Jeremiah Heck, I'm a Software Developer with experience in Game and Full-stack Development.";
+        echo "</div></div>";
         echo "</div>";
     }   
 }

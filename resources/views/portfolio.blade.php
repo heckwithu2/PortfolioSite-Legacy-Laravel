@@ -35,7 +35,12 @@ Make scaffolding --}}
                             document.getElementById("descProject").innerHTML = "<h2 class='projectText'>" + projectObj.description + "</h2>";
                         }
                         if (projectObj.picture != null) {
-                           document.getElementById("picProject").innerHTML = "<p class='projectText'>" + projectObj.picture + "</p>";
+                            if (projectObj.name == "Portfolio-Site") {
+                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 500px;' class='img-fluid' src='images/portfolioPic2.png'><img style='max-height: 500px;' class='img-fluid' src='images/" + projectObj.picture + "'></p>";
+                            } else {
+                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='images/" + projectObj.picture + "'></p>";
+                            }
+                           
                         }
                         if (projectObj.github != null) {
                             document.getElementById("gitDownProject").innerHTML = "<a href='" + projectObj.github + "'>" + projectObj.github + "</a>";
@@ -78,19 +83,31 @@ Make scaffolding --}}
             
             window.onload = function () {
                 var url = window.location.hash;
-                
-                var capitals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (i = 0; i < capitals.length; ++i) {
-                    for (x = 0; x < url.length; ++x) {
-                        if (url[x] == capitals[i]) {
-                            var left = url.substr(0,x);
-                            var right = url.substr(x,url.length-1);
-                            var space = ' ';
-                            url = left + space + right;
-                            break;
+                if (url == "") {
+                    displayProject("Portfolio-Site");
+                }
+
+                var space = false;
+                for (x = 0; x < url.length; ++x) {
+                   if (url[x] == " ") {
+                       space = true;
+                   }
+                }
+                if (space == true) {
+                    var capitals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    for (i = 0; i < capitals.length; ++i) {
+                        for (x = 0; x < url.length; ++x) {
+                            if (url[x] == capitals[i]) {
+                                var left = url.substr(0,x);
+                                var right = url.substr(x,url.length-1);
+                                var space = ' ';
+                                url = left + space + right;
+                                break;
+                            }
                         }
                     }
                 }
+                    
                 
                 var pos = url.search("/");
                 if (pos != -1) {
@@ -99,7 +116,12 @@ Make scaffolding --}}
                     displayProject( trimmedUrl );
                 } else {
                     var lengthUrl = url.length-1;
-                    var trimmedUrl = url.substr(2,lengthUrl);
+                    if (space == true) {
+                        var trimmedUrl = url.substr(2,lengthUrl);
+                    } else {
+                        var trimmedUrl = url.substr(1,lengthUrl);
+                    }
+                    
                     categoryToProject( trimmedUrl );
                 }
                 
