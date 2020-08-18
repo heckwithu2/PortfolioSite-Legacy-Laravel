@@ -126,15 +126,15 @@ class projectViewer {
         echo "<div id='projectViewer' class='col projectViewer'>";
         echo "<div class='container-fluid p-0'>";
         echo "<div class='row projectTitleBox'>";
-            echo "<div id='titleProject' class='col-12 text-center projectBox'>";
+            echo "<divv style='text-transform: uppercase;' id='titleProject' class='col-12 text-center projectBox'>";
 
             echo "</div>";
         echo "</div>";
         echo "<div class='row projectDetailsBox'>";
-            echo "<div id='techProject' class='col-3 text-center projectBox'>";
+            echo "<div style='border-right: solid 1px #c3c7d5;' id='techProject' class='col-3 text-center projectBox'>";
 
             echo "</div>";
-            echo "<div id='descProject' class='col-6 text-center projectBox'>";
+            echo "<div style='border-right: solid 1px #c3c7d5;' id='descProject' class='col-6 text-center projectBox'>";
 
             echo "</div>";
             echo "<div id='gitDownProject' class='col-3 text-center projectBox'>";

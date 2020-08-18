@@ -81,7 +81,7 @@ class MegaMenu {
         }
         echo "<div id='mission' class='row p-0 missionStatement'>";
         echo "<div class='col-12 missionStatementText '>";
-        echo   "My name is Jeremiah Heck, I'm a Software Developer with experience in Game and Full-stack Development.";
+        echo   "My name is Jeremiah Heck, I'm a Software Developer with experience in Game Development and Full-stack Development.";
         echo "</div></div>";
         echo "</div>";
     }   

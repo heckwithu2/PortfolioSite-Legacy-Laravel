@@ -36,7 +36,7 @@ Make scaffolding --}}
                         }
                         if (projectObj.picture != null) {
                             if (projectObj.name == "Portfolio-Site") {
-                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 500px;' class='img-fluid' src='images/portfolioPic2.png'><img style='max-height: 500px;' class='img-fluid' src='images/" + projectObj.picture + "'></p>";
+                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='images/portfolioPic2.png'><img style='max-height: 750px;' class='img-fluid' src='images/" + projectObj.picture + "'></p>";
                             } else {
                                 document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='images/" + projectObj.picture + "'></p>";
                             }
