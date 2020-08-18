@@ -49,7 +49,7 @@ return [
             'host' => '127.0.0.1',
             'port' => '3306',
             'database' => 'jeremim2_portfolio',
-            'username' => 'jeremim2',
+            'username' => 'jeremim2_portfolio',
             'password' => 'neverGIVEin@000',
             'unix_socket' => '',
             'charset' => 'utf8mb4',
