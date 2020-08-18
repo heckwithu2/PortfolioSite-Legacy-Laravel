@@ -56,7 +56,7 @@
                </div>
                 <div class="col-8 footerText">
                        Made with the Laravel Framework
-                        <a href="https://laravel.com/"> <img class=" footerIcon img-fluid" src="images/laravel.png"></a>
+                        <a href="https://laravel.com/"> <img class=" footerIcon img-fluid" src="{{ asset('public/images/laravel.png') }}"></a>
                 </div>
                 <div id="bottomRightFooter" class="col">
                    
