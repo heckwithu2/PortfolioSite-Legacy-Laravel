@@ -61,7 +61,7 @@ class projectViewer {
 
         echo "<div id='portfolioHeader' class='row portfolioHeader'>";
         echo "<div class='p-0 col-2 '>";
-        echo "<a id='home' href='http://app.test/Home'><img class='homeIcon icon img-fluid' src='images/Home.png'></a>";
+        echo "<a id='home' href='http://app.test/Home'><img class='homeIcon icon img-fluid' src='public/images/Home.png'></a>";
         echo "</div>";
 
         echo "<div id='resume' class='p-0 col  headerElement headerTitle '>";
@@ -71,9 +71,9 @@ class projectViewer {
 
         echo "<div class='p-0 col-5'>";
         echo "<div class=' iconRow d-flex justify-content-end'>";
-        echo "<a id='git' href='https://github.com/heckwithu2?tab=projects'><img class='socialIcon icon img-fluid' src='images/github.png'></a>";
-        echo "<a id='li' href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/'><img class='socialIcon icon img-fluid' src='images/linkedin2.png'> </a>";                           
-        echo "<a id='mail' href='mailto: jheck10@kent.edu'><img class='socialIcon icon img-fluid' src='images/gmail.png'></a>";
+        echo "<a id='git' href='https://github.com/heckwithu2?tab=projects'><img class='socialIcon icon img-fluid' src='public/images/github.png'></a>";
+        echo "<a id='li' href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/'><img class='socialIcon icon img-fluid' src='public/images/linkedin2.png'> </a>";                           
+        echo "<a id='mail' href='mailto: jheck10@kent.edu'><img class='socialIcon icon img-fluid' src='public/images/gmail.png'></a>";
         echo "</div>";
         echo "</div>";
         echo "</div>";
