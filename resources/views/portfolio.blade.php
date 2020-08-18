@@ -36,9 +36,9 @@ Make scaffolding --}}
                         }
                         if (projectObj.picture != null) {
                             if (projectObj.name == "Portfolio-Site") {
-                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='public/images/portfolioPic2.png'><img style='max-height: 750px;' class='img-fluid' src='public/images/" + projectObj.picture + "'></p>";
+                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='jeremiahheck.tech/public/images/portfolioPic2.png'><img style='max-height: 750px;' class='img-fluid' src='jeremiahheck.tech/public/images/" + projectObj.picture + "'></p>";
                             } else {
-                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='{{ asset('public/images/" + projectObj.picture + "') }}'></p>";
+                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='jeremiahheck.tech/public/images/" + projectObj.picture + "'></p>";
                             }
                            
                         }
