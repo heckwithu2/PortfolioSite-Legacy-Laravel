@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home1/jeremim2/public_html/site/public
-    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R public $DEPLOYPATH
