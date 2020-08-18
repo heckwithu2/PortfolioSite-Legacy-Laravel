@@ -61,7 +61,7 @@ class projectViewer {
 
         echo "<div id='portfolioHeader' class='row portfolioHeader'>";
         echo "<div class='p-0 col-2 '>";
-        echo "<a id='home' href='https://jeremiahheck.tech'><img class='homeIcon icon img-fluid' src='" . asset('public/images/home.png') . "'></a>";
+        echo "<a id='home' href='https://jeremiahheck.tech'><img class='homeIcon icon img-fluid' src='" . asset('public/images/Home.png') . "'></a>";
         echo "</div>";
 
         echo "<div id='resume' class='p-0 col  headerElement headerTitle '>";

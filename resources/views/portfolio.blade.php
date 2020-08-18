@@ -38,7 +38,7 @@ Make scaffolding --}}
                             if (projectObj.name == "Portfolio-Site") {
                                 document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='jeremiahheck.tech/public/images/portfolioPic2.png'><img style='max-height: 750px;' class='img-fluid' src='jeremiahheck.tech/public/images/" + projectObj.picture + "'></p>";
                             } else {
-                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='jeremiahheck.tech/public/images/" + projectObj.picture + "'></p>";
+                                document.getElementById("picProject").innerHTML = "<p class='projectText'><img style='max-height: 750px;' class='img-fluid' src='public/images/bigintPic.png'></p>";
                             }
                            
                         }
@@ -136,7 +136,7 @@ Make scaffolding --}}
 
 
             //make hide button
-            document.getElementById("bottomLeftFooter").innerHTML = "<button class='hideButton' onclick='hideMenu()' ><img class='iconHider img-fluid' src='images/menu.png'>HIDE</button>";
+            document.getElementById("bottomLeftFooter").innerHTML = "<button class='hideButton' onclick='hideMenu()' ><img class='iconHider img-fluid' src='public/images/menu.png'>HIDE</button>";
 
             //hide button
             function hideMenu() {
@@ -148,7 +148,7 @@ Make scaffolding --}}
                 document.getElementById("git").style.display  = "none";
                 document.getElementById("li").style.display  = "none";
                 document.getElementById("mail").style.display  = "none";
-                document.getElementById("bottomLeftFooter").innerHTML = "<button class='hideButton' onclick='showMenu()' ><img class='iconHider img-fluid' src='images/menu.png'>SHOW MENU</button>";
+                document.getElementById("bottomLeftFooter").innerHTML = "<button class='hideButton' onclick='showMenu()' ><img class='iconHider img-fluid' src='public/images/menu.png'>SHOW MENU</button>";
                 viewerWidth(.99);
             }
             //show function 
@@ -162,7 +162,7 @@ Make scaffolding --}}
                 document.getElementById("git").style.display  = "block";
                 document.getElementById("li").style.display  = "block";
                 document.getElementById("mail").style.display  = "block";
-                document.getElementById("bottomLeftFooter").innerHTML = "<button class='hideButton' onclick='hideMenu()' ><img class='iconHider img-fluid' src='images/menu.png'>HIDE</button>";
+                document.getElementById("bottomLeftFooter").innerHTML = "<button class='hideButton' onclick='hideMenu()' ><img class='iconHider img-fluid' src='public/images/menu.png'>HIDE</button>";
                 viewerWidth(.75);
             }
             
