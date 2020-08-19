@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Jeremiah Heck's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="{{ asset('public/css/app.css') }}">
+        <link rel="icon" href="{{ asset('public/images/kentIcon.png') }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
