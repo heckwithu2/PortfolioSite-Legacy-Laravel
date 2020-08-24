@@ -83,17 +83,22 @@ Make scaffolding --}}
             
             window.onload = function () {
                 var url = window.location.hash;
+
+                //if no project specified, default
                 if (url == "") {
                     displayProject("Portfolio-Site");
                 }
 
-                var space = false;
+                //check url for spaces
+                var noSpace = true;
                 for (x = 0; x < url.length; ++x) {
                    if (url[x] == " ") {
-                       space = true;
+                       //there is a space present, and the url doesnt need to expanded
+                       noSpace = false;
                    }
                 }
-                if (space == true) {
+                if (noSpace == true) {
+                    //the url needs expanded
                     var capitals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                     for (i = 0; i < capitals.length; ++i) {
                         for (x = 0; x < url.length; ++x) {
@@ -116,7 +121,7 @@ Make scaffolding --}}
                     displayProject( trimmedUrl );
                 } else {
                     var lengthUrl = url.length-1;
-                    if (space == true) {
+                    if (noSpace == true) {
                         var trimmedUrl = url.substr(2,lengthUrl);
                     } else {
                         var trimmedUrl = url.substr(1,lengthUrl);

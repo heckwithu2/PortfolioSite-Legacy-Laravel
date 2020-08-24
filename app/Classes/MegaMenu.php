@@ -36,7 +36,7 @@ class MegaMenu {
             } else {
                 echo "<div class=' container'>";
                 echo "<div class=' iconRow d-flex justify-content-end'>";
-                echo    "<a href='https://github.com/heckwithu2?tab=projects'><img class='socialIcon icon img-fluid' src='" . asset('public/images/github.png') . "'></a>";
+                echo    "<a href='https://github.com/heckwithu2?tab=projects'><img class='socialIcon icon img-fluid' stye='min-width: 25px;' src='" . asset('public/images/github.png') . "'></a>";
                 echo    "<a href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/'><img class='socialIcon icon img-fluid' src='" . asset('public/images/linkedin2.png') . "'> </a>";                        
                 echo    "<a href='mailto: jheck10@kent.edu'><img class='socialIcon icon img-fluid' src='" . asset('public/images/gmail.png') . "'></a>";
                 echo "</div>";
