@@ -113,7 +113,6 @@ Make scaffolding --}}
                     }
                 }
                     
-                
                 var pos = url.search("/");
                 if (pos != -1) {
                     var lengthUrl = url.length-1;
