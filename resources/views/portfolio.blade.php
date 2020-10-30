@@ -15,7 +15,7 @@ Make scaffolding --}}
             //display data of given project name
             function displayProject( project ) {
                 
-               //grab categories array and Projects array from php
+                //grab categories array and Projects array from php
                 //var projects = [];
                 var projects = @json($projects);
                 var nameArray = @json($nameArray);
