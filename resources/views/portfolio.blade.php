@@ -12,6 +12,7 @@ Make scaffolding --}}
     @endphp
 
       <script >
+      //hello
             //display data of given project name
             function displayProject( project ) {
                 
