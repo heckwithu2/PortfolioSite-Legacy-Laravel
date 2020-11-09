@@ -44,7 +44,7 @@ Make scaffolding --}}
                            
                         }
                         if (projectObj.github != null) {
-                            document.getElementById("gitDownProject").innerHTML = "<a href='" + projectObj.github + "'>" + projectObj.github + "</a> ";
+                            document.getElementById("gitDownProject").innerHTML = "<a href='" + projectObj.github + "'> GitHub </a> ";
                         }
                         //this is the project to link to parent
                         
