@@ -44,7 +44,7 @@ Make scaffolding --}}
                            
                         }
                         if (projectObj.github != null) {
-                            document.getElementById("gitDownProject").innerHTML = "<a style='font-size=25px;' href='" + projectObj.github + "'> GitHub </a> ";
+                            document.getElementById("gitDownProject").innerHTML = "<a href='" + projectObj.github + "'></a> ";
                            // document.getElementById("gitDownProject").innerHTML = "<a href='https://catalog.uncc.edu/preview_program.php?catoid=26&poid=6466 '> GitHub </a> ";
                         }
                         //this is the project to link to parent
