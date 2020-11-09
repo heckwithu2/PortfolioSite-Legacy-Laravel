@@ -137,7 +137,7 @@ class projectViewer {
             echo "<div style='border-right: solid 1px #c3c7d5;' id='descProject' class='col-6 text-center projectBox'>";
 
             echo "</div>";
-            echo "<div id='gitDownProject' class='col-3 text-center projectBox'>";
+            echo "<div id='gitDownProject' class='col-3'>";
 
             echo "</div>";
         echo "</div>";
