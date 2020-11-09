@@ -127,7 +127,7 @@ class projectViewer {
         echo "<div class='container-fluid p-0'>";
         echo "<div class='row projectTitleBox'>";
             echo "<divv style='text-transform: uppercase;' id='titleProject' class='col-12 text-center projectBox'>";
-
+            echo "<a id='gitDownProject' href=''>Github</a>";
             echo "</div>";
         echo "</div>";
         echo "<div class='row projectDetailsBox'>";
@@ -138,7 +138,7 @@ class projectViewer {
 
             echo "</div>";
             echo "<div class='col-3 text-center projectBox'>";
-            echo "<a id='gitDownProject' href=''>Github</a>";
+           
             echo "</div>";
         echo "</div>";
         echo "<div class='row projectPictureBox'>";
