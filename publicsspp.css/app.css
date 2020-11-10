@@ -464,7 +464,8 @@ Mission Statement
 }
 
 .githubLink {
-  font-size: 25px !important;
-  color: yellow !important;
+  font-size: 25px;
+  text-align: center;
+  color: yellow;
 }
 /*# sourceMappingURL=app.css.map */
