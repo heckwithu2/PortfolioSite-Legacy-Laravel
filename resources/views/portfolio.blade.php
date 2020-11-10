@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
 
-    @extends('layouts.header')
+@extends('layouts.masterPortfolio')
 
-     <body>
-        <div class="container-fluid">
-            {{-- Place PHP HERE
-            Make scaffolding --}}
+    @section('content')
 
             @php
                 $makeProjectViewer = new App\Classes\projectViewer;
                 $makeProjectViewer->makeProjectViewer();
-                @endphp
+            @endphp
 
-                <script >
+                <script>
                 //hello
                         //display data of given project name
                         function displayProject( project ) {
@@ -184,11 +179,10 @@
 
 
 
-                @extends('layouts.footer')
+        {{-- need the footer to be loaded in the correct order for the js to work --}}
+        {{-- @extends('layouts.footer') --}}
+    @endsection
 
-            </div>
-    </body>
-</html>
 
 
  

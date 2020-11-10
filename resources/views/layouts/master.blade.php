@@ -1,9 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Jeremiah Heck's Portfolio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ asset('public/css/app.css') }}">
         <link rel="icon" href="{{ asset('public/images/kentIcon.png') }}">
+       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -29,3 +32,22 @@
                 urlHash = "#" + parentUntrimmed + "/" + childUntrimmed;
             }
         </script>
+
+
+    <body>
+        <div class="container-fluid">
+
+           @yield('content')
+
+                <div id="footer" class=" footerRow row">
+                    <div id="bottomLeftFooter" class="col">
+                    </div>
+                    <div class="col-12 footerText">
+                        Made with the Laravel Framework
+                            <a href="https://laravel.com/"> <img class=" footerIcon img-fluid" src="{{ asset('public/images/laravel.png') }}"></a>
+                    </div>
+                    <div id="bottomRightFooter" class="col">
+                </div> 
+        </div>
+    </body>
+</html>

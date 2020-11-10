@@ -76,14 +76,9 @@ class MegaMenu {
                     echo "</div></div>";
                 }
             }
-            echo "</div>";
+        echo "</div>";
            
         }
-        echo "<div id='mission' class='row p-0 missionStatement'>";
-        echo "<div class='col-12 missionStatementText '>";
-        echo   "My name is Jeremiah Heck, I'm a Software Developer with experience in Game Development and Full-stack Development.";
-        echo "</div></div>";
-        echo "</div>";
     }   
 }
 
