@@ -13,7 +13,7 @@ use App\Finder;
 |
 */
 //Route::get('/menu', 'homeController@store');
-Route::get('/', 'baseController@base');
+Route::get('/', 'pageController@home');
 
 Route::get('/Home', 'pageController@home');
 
