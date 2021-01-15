@@ -26,19 +26,21 @@ class MegaMenu {
         //display menu from server
         for ($i = 1;$i < count($this->headerArray);++$i) {
             //build parent menu elements
-            echo "<div class='col headerElement container-fluid '>";
+            
         
             if ($this->headerArray[$i] != "Icons" ) {
-
+                echo "<div class='col-md-4 col-sm-6 headerElement container-fluid '>";
+                //resume element
                 echo "<div class='row headerRow'>";
                 echo "<div id='" . $this->headerArray[$i] . "'onclick='routeParent(this.innerHTML)' class='col-12 dropdownContent'>". $this->headerArray[$i];
                 echo "</div></div>";
             } else {
-                echo "<div class=' container'>";
-                echo "<div class=' iconRow d-flex justify-content-end'>";
-                echo    "<a href='https://github.com/heckwithu2?tab=projects' target='_blank'><img class='socialIcon icon img-fluid' stye='min-width: 25px;' src='" . asset('public/images/github.png') . "'></a>";
-                echo    "<a href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/'  target='_blank'><img class='socialIcon icon img-fluid' src='" . asset('public/images/linkedin2.png') . "'> </a>";                        
-                echo    "<a href='mailto: jeremiah.heck7@gmail.com'><img class='socialIcon icon img-fluid' src='" . asset('public/images/gmail.png') . "'></a>";
+                echo "<div class='col-md-4 col-sm-6 headerElement container-fluid hideForPhone'>";
+                echo "<div class=' row'>";
+                echo "<div class='  iconRow d-flex  centerMyIcons '>";
+                echo    "<a href='https://github.com/heckwithu2?tab=projects' target='_blank'><img class='socialIcon icon' stye='min-width: 25px;' src='" . asset('public/images/github.png') . "'></a>";
+                echo    "<a href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/'  target='_blank'><img class='socialIcon icon' src='" . asset('public/images/linkedin2.png') . "'> </a>";                        
+                echo    "<a href='mailto: jeremiah.heck7@gmail.com'><img class='socialIcon icon' src='" . asset('public/images/gmail.png') . "'></a>";
                 echo "</div>";
                 echo "</div>";
             }            

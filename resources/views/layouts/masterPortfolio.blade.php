@@ -18,7 +18,7 @@
                 parentUntrimmed = parentString;
                 var parent = parentString.split(" ").join("");
                 var string = "/" + parent;
-                window.location = string;  
+                window.location = string;
                 urlHash = "#" + parentUntrimmed + "/" + childUntrimmed;             
             }
 
