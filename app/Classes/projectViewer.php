@@ -53,35 +53,11 @@ class projectViewer {
 
     //create basic html for viewer
     public function makeProjectViewer(){
-        
-        //projectsForCategory( $nameArray );
-        echo "<div id='portfolioClient' class='row' >";
 
-        echo "<div id='portfolioMenu' class='col-3 portfolioMenu  container-fluid '>";
+        echo "<div id='portfolioMenu' class='row portfolioMenu p-0 container-fluid '>";
 
-        echo "<div id='portfolioHeader' class='row portfolioHeader'>";
-        echo "<div class='p-0 col-2 '>";
-        echo "<a id='home' href='https://jeremiahheck.tech'><img class='homeIcon icon img-fluid' src='" . asset('public/images/Home.png') . "'></a>";
-        echo "</div>";
-
-        echo "<div id='resume' class='p-0 col-5 headerElement headerTitle '>";
-        echo "Portfolio";
-        echo "</div>";
-
-
-        echo "<div class='p-0 col-5'>";
-        echo "<div class=' iconRow d-flex justify-content-end'>";
-        echo "<a id='git' href='https://github.com/heckwithu2?tab=projects' target='_blank'><img class='socialIcon icon img-fluid' src='" . asset('public/images/github.png')  . "'></a>";
-        echo "<a id='li' href='https://www.linkedin.com/in/jeremiah-heck-498b1a184/' target='_blank'><img class='socialIcon icon img-fluid' src='" . asset('public/images/linkedin2.png') . "'> </a>";                           
-        echo "<a id='mail' href='mailto: jheck10@kent.edu' ><img class='socialIcon icon img-fluid' src='" . asset('public/images/gmail.png') . "'></a>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
-
-        echo "<div id='portfolioList' class='row portfolioList'>";
-        echo "<div class='col-12 container-fluid '>";
-
-
+        echo "<div id='portfolioList' class='row portfolioList pr-0'>";
+        echo "<div class='pl-3 col-12 container-fluid '>";
 
         for ($i = 1;$i < count($this->subcategoriesArray)+1;++$i) {
 
@@ -115,44 +91,10 @@ class projectViewer {
             //subSub
          }
          echo "</div>";
-         echo "<div class='text-center col-12 nametag'>";
-         echo "Jeremiah Heck";
+         //project list end
          echo "</div>";
+         //project menu end
          echo "</div>";
-         echo "</div>";
-
-        //beginning of Project Viewer
-        //make area for javascript to put the data into
-        echo "<div id='projectViewer' class='col projectViewer'>";
-        echo "<div class='container-fluid p-0'>";
-        echo "<div class='row projectTitleBox'>";
-            echo "<divv style='text-transform: uppercase;' id='titleProject' class='col-12 text-center projectBox'>";
-            
-            echo "</div>";
-        echo "</div>";
-        echo "<div class='row projectDetailsBox'>";
-            echo "<div style='border-right: solid 1px #c3c7d5;' id='techProject' class='col-3 text-center projectBox'>";
-
-            echo "</div>";
-            echo "<div style='border-right: solid 1px #c3c7d5;' id='descProject' class='col-6 text-center projectBox'>";
-
-            echo "</div>";
-            echo "<div class='col-3 text-center projectBox'>";
-                echo "<a class='githubLink' id='gitDownProject' href='' target='_blank'> Github Link </a>";
-            echo "</div>";
-        echo "</div>";
-        echo "<div class='row projectPictureBox'>";
-            echo "<div id='picProject' class='col-12 text-center projectBox'>";
-
-            echo "</div>";
-        echo "</div>";
-        echo "<div class='row projectFooterBox' >";
-            
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>"; 
-
     }
 }
 

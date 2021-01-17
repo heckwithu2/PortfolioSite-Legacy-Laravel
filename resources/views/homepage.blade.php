@@ -6,7 +6,7 @@
         <div class="col-12 container-fluid m-0">
             <div class="row mt-1">
                 <div class="col-6 nameText adjustForIcons">
-                    Jeremiah Heck's
+                    Jeremiah Heck
                 </div>
                 <div class="col-6 iconRow d-flex flex-row-reverse  appear">
                     <a href="https://github.com/heckwithu2?tab=projects" target="_blank">
