@@ -175,7 +175,9 @@
                         }
                     }
                 }
-                
+                if (window.innerWidth < 768) {
+                    hideList();
+                }
             }
             
             function categoryToProject( categoryName ) {
