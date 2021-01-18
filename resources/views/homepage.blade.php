@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="col-md-4 missionBox mt-5">
-                        <button class="innerMissionBox " onclick="takeMeHere('https://jeremiahheck.tech/Portfolio#ComputerScienceProjects/Stack(Data-Type)')">  
+                        <button class="innerMissionBox " onclick="takeMeHere('https://jeremiahheck.tech/Portfolio#ComputerScienceProjects')">  
                             <h2 class="title" >Advanced Computer Science</h2>
                             <a href="https://jeremiahheck.tech/Portfolio#ComputerScienceProjects/Stack(Data-Type)" target="_blank" class="missionStatementText  m-0 p-0">View all of my CS projects.</a>
                             <img class="mt-2 img-fluid" src="public/images/stackPic.png">
