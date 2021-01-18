@@ -274,7 +274,7 @@ Left side menu
   display: block;
   background-color: #c3c8d5;
   height: 95%;
-  position: relative;
+  top: 76px;
   z-index: -1;
   max-width: 300px;
   left: 0px;
@@ -292,11 +292,12 @@ Left side menu
 .portfolioHeader {
   border-bottom: solid 2px #1f232d;
   background-color: #1f232d;
-  max-height: 8% !important;
+  height: 76px !important;
   background-color: #1f232d;
   z-index: 2;
   border-right: solid 2px #1f232d;
   visibility: visible;
+  position: fixed;
 }
 
 @media only screen and (max-width: 768px) {
@@ -318,7 +319,7 @@ Right side menu
   background-color: #ffffff;
   height: auto;
   position: absolute;
-  top: 77px;
+  top: 76px;
   right: 0px;
   z-index: -1;
 }
@@ -498,6 +499,7 @@ Text menu
 
 .aTagRemove {
   color: #34394b;
+  text-shadow: 1px 1px 0 #444;
 }
 
 .aTagRemove:hover {

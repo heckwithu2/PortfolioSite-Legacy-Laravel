@@ -115,7 +115,7 @@
 
                 var finalHeaderHeight = parseInt(headerHeight);
 
-                var finalHeight = totalheight - finalHeaderHeight - 50;
+                var finalHeight = totalheight - finalHeaderHeight - 51;
                 var myStringHeight = finalHeight.toString();
                 myStringHeight += "px";
                 document.getElementById('portfolioList').style.height = myStringHeight; 
