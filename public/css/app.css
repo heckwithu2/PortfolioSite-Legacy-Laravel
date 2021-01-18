@@ -15,6 +15,7 @@ Universal
 
 body {
   background-color: #15171e;
+  height: auto !important;
 }
 
 /* ------------------------------------------
@@ -147,6 +148,10 @@ Normal Header Menu
 @media only screen and (max-width: 576px) {
   .adjustForIcons {
     font-size: 25px;
+  }
+  .headerElement {
+    border-top: 1px solid #e1e3ea;
+    border-bottom: 1px solid #e1e3ea;
   }
 }
 
@@ -493,26 +498,40 @@ Text menu
 
 .aTagRemove {
   color: #34394b;
-  text-decoration: none;
+  text-shadow: 1px 1px 0 #444;
 }
 
 .aTagRemove:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-
-/* ------------------------------------------
-Dynamic FOR PORTFOLIO ONLY?
------------------------------------------ */
-@media only screen and (max-width: 1075px) {
-  .footerText {
-    /* display: none; */
-  }
+  text-decoration: none;
 }
 
 /* ------------------------------------------
 Mission Statement
 ----------------------------------------- */
+.entireLink {
+  height: auto;
+}
+
+.missionBox {
+  background-color: inherit;
+  border: solid 5px inherit;
+  min-height: 200px;
+  height: auto;
+  padding: 5px;
+  margin-top: 50px;
+}
+
+.innerMissionBox {
+  background-color: #34394b;
+  border-radius: 5px;
+  min-height: 200px;
+  height: auto;
+  width: 100%;
+  border: solid 0px !important;
+  margin: 0px;
+  padding: 5px;
+}
+
 .missionStatement {
   -webkit-transition-duration: .2s !important;
           transition-duration: .2s !important;
@@ -522,16 +541,9 @@ Mission Statement
 }
 
 .missionStatementText {
-  -webkit-transition-duration: .2s !important;
-          transition-duration: .2s !important;
-  -webkit-transition-timing-function: ease-in-out !important;
-          transition-timing-function: ease-in-out !important;
   color: #e1e3ea;
   text-align: center;
-  font-size: 35px;
-  font-style: italic;
-  position: relative;
-  top: 200%;
+  font-size: 15px;
 }
 
 .githubLink {

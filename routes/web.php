@@ -20,3 +20,5 @@ Route::get('/Home', 'pageController@home');
 Route::get('/Portfolio', 'pageController@portfolio');
 
 Route::get('/Resume', 'pageController@about');
+
+Route::get('/toDoListUserGuide', 'pageController@toDoListUserGuide');

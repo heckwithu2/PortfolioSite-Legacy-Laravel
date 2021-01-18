@@ -13,7 +13,6 @@ class pageController extends Controller
 {
     //
     public function home() {
-      
         return view('homepage');
     }
 
@@ -27,11 +26,16 @@ class pageController extends Controller
         $nameArray = $projectData->nameArray;
         return view('portfolio', compact('categories', 'projects', 'nameArray'));
     }
-    
+
     public function about() {
         $filename = 'Resume.pdf';
         $path = storage_path($filename);
-
+        return response()->file($path);
+    }
+    
+    public function toDoListUserGuide() {
+        $filename = 'toDoListUserGuide.pdf';
+        $path = storage_path($filename);
         return response()->file($path);
     }
 
