@@ -34,7 +34,7 @@
                     <button id="toDoListUserGuide" class="innerMissionBox " onclick="addOntoUrl(this.id)">  
                         <h2 class="title" >Iphone To-do List</h2>
                         <a href="https://github.com/heckwithu2/iosPlannerApp" target="_blank" class="missionStatementText  m-0 p-0">Github Link</a>
-                        <img class="mt-2 img-fluid" src="public/images/userGuideSnipPIC.png">
+                        <img class="mt-2 img-fluid" src="https://jeremiahheck.tech/public/images/userGuideSnipPIC.png">
                     </button>
                 </div>
 
@@ -42,7 +42,7 @@
                     <button class="innerMissionBox" onclick="takeMeHere('https://gandacksu.jeremiahheck.tech/Homepage.html')">    
                         <h2 class="title">Front End Work</h2>
                         <a href="https://github.com/heckwithu2/gandacksu" target="_blank" class="missionStatementText  m-0 p-0">Github Link</a>
-                        <img class="mt-2 img-fluid" src="public/images/gandacksuPIC.png">
+                        <img class="mt-2 img-fluid" src="https://jeremiahheck.tech/public/images/gandacksuPIC.png">
                     </button>
                 </div>
 
@@ -50,7 +50,7 @@
                         <button class="innerMissionBox " onclick="takeMeHere('https://jeremiahheck.tech/Portfolio#ComputerScienceProjects/Stack(Data-Type)')">  
                             <h2 class="title" >Advanced Computer Science</h2>
                             <a href="https://jeremiahheck.tech/Portfolio#ComputerScienceProjects/Stack(Data-Type)" target="_blank" class="missionStatementText  m-0 p-0">View all of my CS projects.</a>
-                            <img class="mt-2 img-fluid" src="public/images/stackPIC.png">
+                            <img class="mt-2 img-fluid" src="https://jeremiahheck.tech/public/images/stackPIC.png">
                         </button>
                 </div>
             </div>
