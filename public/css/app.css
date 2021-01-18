@@ -499,9 +499,6 @@ Text menu
 
 .aTagRemove {
   color: #34394b;
-}
-
-.aTagRemove:hover {
   text-decoration: none;
 }
 
