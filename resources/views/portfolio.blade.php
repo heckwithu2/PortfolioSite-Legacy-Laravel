@@ -25,7 +25,7 @@
                                 <a id="li" href="https://www.linkedin.com/in/jeremiah-heck-498b1a184/" target="_blank">
                                     <img class="socialIcon icon mt-1" src="https://jeremiahheck.tech/public/images/linkedin2.png"> 
                                 </a>
-                                <a id="mail" href="mailto: jheck10@kent.edu">
+                                <a id="mail" href="mailto: jeremiah.heck7@gmail.com">
                                     <img class="socialIcon icon mt-1" src="https://jeremiahheck.tech/public/images/gmail.png">
                                 </a>
                             </div>                  
