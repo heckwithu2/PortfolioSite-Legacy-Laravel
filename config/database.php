@@ -50,7 +50,7 @@ return [
             'port' => '3306',
             'database' => 'jeremim2_portfolio',
             'username' => 'jeremim2_WPLEA',
-            'password' => 'DRAGON100',
+            'password' => 'NOVEMBERis100',
             'unix_socket' => '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
