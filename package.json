@@ -1,5 +1,6 @@
 {
   "name": "portfolio-react-front-end",
+  "homepage": "https://jeremiahheck.tech/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
